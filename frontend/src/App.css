@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+.logo-container {
+    text-align: center;
+    background-color: #f0f0f0; /* Background color for contrast */
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the text in a classic and cursive font */
+.logo-text {
+    font-family: "Lucida Handwriting", cursive; /* You can replace 'Lucida Handwriting' with another cursive font you prefer */
+    font-size: 50px; /* Adjust the font size as needed */
+    color: #333; /* Text color */
+    /* text-transform: uppercase; Convert text to uppercase for a classic look */
+    letter-spacing: 6px; /* Increase letter spacing for readability */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* For centering text within children */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ArrowButton.css */
+.arrow-button {
+    display: inline-block;
+    padding: 30px 30px; /* Adjust padding to make the button bigger */
+    background-color: black; /* Button background color */
+    color: white; /* Text color */
+    border: none;
+    cursor: pointer;
+    position: relative;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100px; /* Adjust the left position to control the arrow's position */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 100px 70px; /* Adjust the border-width to make the arrow thicker or thinner */
+    border-color: transparent transparent transparent black; /* Arrow color */
 }
